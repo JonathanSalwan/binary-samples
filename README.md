@@ -1,4 +1,4 @@
 binary-samples
 ==============
 
-Samples of binary with different architectures. Useful for binaries analysis on specific architectures.
+Samples of binary with different formats and architectures. A test suite for your binary analysis tools.
