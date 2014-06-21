@@ -2,15 +2,16 @@ CFLAGS   = -Wall -Wextra -std=c99 -g -z execstack
 CPPFLAGS =
 LDFLAGS  =
 
+I386_T1 = self-modifying-type1-i386
 
-all: self-modifying-32
+all: $(I386_T1)
 
-self-modifying-32: self-modifying-32.c
+$(I386_T1): $(I386_T1).c
 	$(CC) -m32 $(CFLAGS) $(CPPFLAGS) -o $@ $< $(LDFLAGS)
 
-self-modifying-32.o: self-modifying-32.s
+$(I386_T1).o: $(I386_T1).s
 	$(CC) -m32 $(CFLAGS) $(CPPFLAGS) -c -o $@ $< $(LDFLAGS)
 
 clean:
-	rm -f self-modifying-32 self-modifying-32.o *~
+	rm -f $(I386_T1) $(I386_T1).o *~
 
