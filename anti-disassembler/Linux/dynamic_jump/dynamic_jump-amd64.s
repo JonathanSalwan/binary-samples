@@ -4,7 +4,7 @@
 _start:
 	mov	$end, %rax
 	jmpq 	*%rax
-	nop
+	.long	0x12345
 	add 	$10, %eax
 	nop
 	nop

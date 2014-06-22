@@ -4,7 +4,7 @@
 _start:
 	movl	$end, %eax
 	jmp	*%eax
-	nop
+	.long	0x12345
 	add	$10, %eax
 	nop
 	nop
