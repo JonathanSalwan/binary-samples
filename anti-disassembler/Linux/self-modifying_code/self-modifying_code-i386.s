@@ -1,5 +1,5 @@
 .globl _start
-	
+
 .text
 _start:
 	call	.+0x24

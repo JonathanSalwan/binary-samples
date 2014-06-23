@@ -1,13 +1,13 @@
+#include <stdlib.h>
+
 char code[] =
   "\xe8\x1f\x00\x00\x00\x58\xc6\x40\x0e\xeb\x43\xc6\x40\x06\xeb"
   "\xc6\x40\x07\x08\x50\xf5\x42\x51\x4b\xb8\x01\x00\x00\x00\xbb"
   "\x00\x00\x00\x00\xcd\x80\xeb\xdf";
 
 int main() {
-   int *ret;
+  int (*func)() = (int (*)()) code;
+  (int)(*func)();
 
-   ret = (int *) &ret + 2;
-   (*ret) = (int) code;
-
-   return 0;
+  return EXIT_SUCCESS;
 }
