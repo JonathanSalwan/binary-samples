@@ -2,7 +2,7 @@ CFLAGS   = -Wall -Wextra -std=c99 -g -z execstack
 CPPFLAGS =
 LDFLAGS  =
 
-I386 = self-modifying_code-i386
+I386 = packer-i386
 
 all: $(I386)
 
